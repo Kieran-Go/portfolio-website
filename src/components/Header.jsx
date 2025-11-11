@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { DarkModeContext } from "../contexts/darkModeContext";
 import capitalizeString from "../utility/capitalizeString";
+import { sun, moon } from "../utility/images";
 
 export default function Header() {
     // ----- CONTEXTS -----
@@ -8,7 +9,7 @@ export default function Header() {
 
     // ----- FUNCTIONS -----
     // Scrolls smoothly to specified document section
-    const goTo = (sectionId) => {
+    const scrollTo = (sectionId) => {
         const section = document.getElementById(sectionId);
         if(section) {
             section.scrollIntoView({ behavior: "smooth" });
@@ -27,10 +28,19 @@ export default function Header() {
             <div className="nav">
                 {nav.map((n) => {
                     return(
-                        <p key={n} onClick={() => goTo(n)}>{capitalizeString(n)}</p>
+                        <p key={n} onClick={() => scrollTo(n)}>
+                            {capitalizeString(n)}
+                        </p>
                     )
                 })}
             </div>
+
+            {/* Dark mode sun/moon image */}
+            <img 
+                src={darkMode ? moon : sun} 
+                alt={darkMode ? "Moon icon" : "Sun icon"} 
+                onClick={() => setDarkMode(!darkMode)}
+            />
         </div>
     )
 }
