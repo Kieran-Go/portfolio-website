@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { DarkModeContext } from "../contexts/darkModeContext";
 import capitalizeString from "../utility/capitalizeString";
 import { sun, moon } from "../utility/images";
+import "../css/Header.css";
 
 export default function Header() {
     // ----- CONTEXTS -----
@@ -22,7 +23,7 @@ export default function Header() {
     // ----- RENDER -----
     return(
         // Main div container for header ui
-        <div className="header">
+        <div className={`header ${darkMode ? "dark" : ""}`}>
 
             {/* Iterate through nav array to render all nav options */}
             <div className="nav">
