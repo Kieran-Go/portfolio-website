@@ -1,12 +1,36 @@
 import { useContext } from "react";
 import { DarkModeContext } from "../contexts/darkModeContext";
+import capitalizeString from "../utility/capitalizeString";
 
 export default function Header() {
     // ----- CONTEXTS -----
     const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
+    // ----- FUNCTIONS -----
+    // Scrolls smoothly to specified document section
+    const goTo = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if(section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
+    // Nav components array
+    const nav = ["home", "about", "projects", "contact"];
+
     // ----- RENDER -----
     return(
-        <h1>Hello World!!!</h1>
+        // Main div container for header ui
+        <div className="header">
+
+            {/* Iterate through nav array to render all nav options */}
+            <div className="nav">
+                {nav.map((n) => {
+                    return(
+                        <p key={n} onClick={() => goTo(n)}>{capitalizeString(n)}</p>
+                    )
+                })}
+            </div>
+        </div>
     )
 }
