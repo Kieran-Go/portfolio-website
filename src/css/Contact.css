@@ -1,0 +1,39 @@
+/* Main container for Contact content */
+.contact{
+    text-align: center;
+    margin: auto;
+    padding: 30px 250px 0 250px;
+    transition: 
+        color 0.2s ease-in,
+        background-color 0.2s ease-in;
+}
+
+/* Dark mode styles for Contact container */
+.contact.dark {
+    color: white;
+    background-color: #0f172a;
+}
+
+/* Short paragraph */
+.contact p{
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+/* Contact details container */
+.contact-details{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+/* Individual contact details */
+.contact-details p{
+    font-weight: bold;
+}
+.contact-details p span, .contact-details p a{
+    color: rgb(17, 171, 17);
+}
+.contact-details p a:hover{
+    color: rgb(16, 218, 16);
+}

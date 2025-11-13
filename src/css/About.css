@@ -2,6 +2,7 @@
 .about{
     margin: auto;
     margin-top: 0;
+    margin-bottom: 0;
     padding: 30px 250px 0 250px;
     box-shadow: 0 -5px 6px 0px rgba(0, 0, 0, 0.25);
     transition: 
@@ -42,7 +43,6 @@
     color: white;
     max-width: 80%;
     margin: auto;
-    margin-bottom: 60px;
 }
 
 /* Individual skills */
