@@ -17,6 +17,15 @@ export default function Header() {
         }
     }
 
+    // Toggles dark mode and sets it in local storage
+    const toggleDarkMode = () => {
+    setDarkMode(prev => {
+        const newMode = !prev;
+        localStorage.setItem("darkMode", newMode);
+        return newMode;
+    });
+}
+
     // Nav components array
     const nav = ["home", "about", "projects", "contact"];
 
@@ -40,7 +49,7 @@ export default function Header() {
             <img 
                 src={darkMode ? moon : sun} 
                 alt={darkMode ? "Moon icon" : "Sun icon"} 
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={() => toggleDarkMode()}
             />
         </div>
     )
