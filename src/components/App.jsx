@@ -3,6 +3,7 @@ import Contact from "./Contact"
 import Footer from "./Footer"
 import Header from "./Header"
 import Home from "./Home"
+import Projects from "./Projects"
 
 export default function App() {
   // ----- RENDER -----
@@ -11,6 +12,7 @@ export default function App() {
       <Header />
       <Home />
       <About />
+      <Projects />
       <Contact />
       <Footer />
     </>

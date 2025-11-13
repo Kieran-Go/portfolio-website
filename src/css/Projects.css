@@ -1,0 +1,55 @@
+/* Main container for projects */
+.projects{
+    margin: auto;
+    margin-top: 0;
+    padding: 30px 250px 0 250px;
+    transition: 
+        color 0.2s ease-in,
+        background-color 0.2s ease-in;
+}
+
+/* Dark styles for projects container */
+.projects.dark{
+    color: white;
+    background-color: #0f172a;
+}
+
+/* Projects grid styles */
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Individual projects */
+.project-item{
+    height: 450px;
+    border: solid black 1px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    background-color: white;
+    transition: 
+        color 0.2s ease-in,
+        background-color 0.2s ease-in;
+}
+
+/* Individual projects dark styles */
+.projects.dark .project-item{
+    background-color: rgb(32, 33, 49);
+}
+
+/* Project thumbnail */
+.project-item img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Container for project info */
+.project-item .info{
+    width: 90%;
+    margin: auto;
+}

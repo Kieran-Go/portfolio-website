@@ -1,11 +1,13 @@
 body{
     font-family: sans-serif; /* Replace with a more suitable font later */
+    background-color: #f8fafc;
 }
 
 /* ----- TITLE STYLES ----- */
 .title{
     font-size: 3rem;
     text-align: center;
+    margin-top: 100px;
 }
 
 .title::before{

@@ -1,3 +1,32 @@
+import kieransSoundsImg from "./assets/images/thumbnails/thumbnail_kierans_sounds.JPG";
+
+export const projects = [
+    {
+        title: "Kieran's Sounds",
+        description: "Description goes here",
+        thumbnail: kieransSoundsImg,
+        github: "https://github.com/Kieran-Go/kierans-sounds",
+        liveDemo: "https://kierans-sounds.vercel.app/",
+        showRenderDisclaimer: true,
+    },
+    {
+        title: "Kieran's Sounds",
+        description: "Description goes here",
+        thumbnail: kieransSoundsImg,
+        github: "https://github.com/Kieran-Go/kierans-sounds",
+        liveDemo: "https://kierans-sounds.vercel.app/",
+        showRenderDisclaimer: true,
+    },
+    {
+        title: "Kieran's Sounds",
+        description: "Description goes here",
+        thumbnail: kieransSoundsImg,
+        github: "https://github.com/Kieran-Go/kierans-sounds",
+        liveDemo: "https://kierans-sounds.vercel.app/",
+        showRenderDisclaimer: true,
+    },
+]
+
 export const about = {
     description: [
         `Recent IT graduate with a Diploma in Advanced Programming, motivated to apply my skills
@@ -25,7 +54,3 @@ export const about = {
         "Responsive Design",
     ],
 }
-
-export const projects = [
-
-]

@@ -1,22 +1,15 @@
+import "../css/Header.css";
 import { useContext } from "react";
 import { DarkModeContext } from "../contexts/darkModeContext";
 import capitalizeString from "../utility/capitalizeString";
+import scrollTo from "../utility/scrollTo";
 import { sun, moon } from "../utility/images";
-import "../css/Header.css";
 
 export default function Header() {
     // ----- CONTEXTS -----
     const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
     // ----- FUNCTIONS -----
-    // Scrolls smoothly to specified document section
-    const scrollTo = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if(section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        }
-    }
-
     // Toggles dark mode and sets it in local storage
     const toggleDarkMode = () => {
     setDarkMode(prev => {

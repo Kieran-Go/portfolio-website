@@ -1,6 +1,7 @@
 import "../css/Home.css"
 import { useContext, useState, useEffect } from "react";
 import { DarkModeContext } from "../contexts/darkModeContext";
+import scrollTo from "../utility/scrollTo";
 
 export default function Home() {
     // ----- CONTEXTS -----
@@ -43,22 +44,13 @@ export default function Home() {
         }
     }, [index, fullText]);
 
-    // ----- FUNCTIONS -----
-    // Scroll smoothly down to projects section
-    const scrollToProjects = () => {
-        const section = document.getElementById("projects");
-        if(section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        }
-    }
-
     // ----- RENDER -----
     return(
         <div id="home" className={`home ${darkMode ? "dark" : ""}`}>
             <h1>Kieran Gough</h1>
             <h3 className="typing">{displayedText}</h3>
             <p>Building web apps with JavaScript, one line of code at a time.</p>
-            <button onClick={() => scrollToProjects()}>View my Projects</button>
+            <button onClick={() => scrollTo("projects")}>View my Projects</button>
         </div>
     )
 }
