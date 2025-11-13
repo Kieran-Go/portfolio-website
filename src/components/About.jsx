@@ -16,8 +16,8 @@ export default function About() {
 
             {/* Render description */}
             <div className="description">
-                {about.description.map((d) => {
-                    return <p>{d}</p>
+                {about.description.map((d, index) => {
+                    return <p key={index}>{d}</p>
                 })}
             </div>
 
@@ -26,7 +26,7 @@ export default function About() {
             <div className="skills-grid">
                 {about.skills.map((s) => {
                     return(
-                        <p className="skill">{s}</p>
+                        <p key={s} className="skill">{s}</p>
                     )
                 })}
             </div>
