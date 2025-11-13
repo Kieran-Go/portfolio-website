@@ -1,3 +1,28 @@
 body{
     font-family: sans-serif; /* Replace with a more suitable font later */
 }
+
+/* ----- TITLE STYLES ----- */
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.title::before{
+    content: "< ";
+    color: rgb(17, 171, 17);
+}
+
+.title::after{
+    content: " />";
+    color: rgb(18, 176, 176);
+}
+
+.title-underline {
+    width: 5%;
+    height: 4px;
+    background: linear-gradient(to right,  #08949b, #6cd76c);
+    margin: auto;
+    margin-top: -25px;
+    border-radius: 2px;
+}

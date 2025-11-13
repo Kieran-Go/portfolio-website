@@ -1,4 +1,4 @@
-import "../css/about.css"
+import "../css/About.css"
 import { useContext } from "react";
 import { DarkModeContext } from "../contexts/darkModeContext";
 import { about } from "../data";
@@ -12,6 +12,7 @@ export default function About() {
         <div id="about" className={`about ${darkMode ? "dark" : ""}`}>
             {/* Render title */}
             <h1 className="title">About</h1>
+            <div className="title-underline"></div>
 
             {/* Render description */}
             <div className="description">

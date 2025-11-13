@@ -23,7 +23,6 @@ export const about = {
         "VS Code",
         "Postman",
         "Responsive Design",
-        "Web Development Best Practices",
     ],
 }
 
