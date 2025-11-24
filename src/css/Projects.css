@@ -25,10 +25,10 @@
 
 /* Individual projects */
 .project-item{
-    height: 450px;
+    height: 500px;
     border: solid black 1px;
     border-radius: 12px;
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     background-color: white;
     transition: 
         color 0.2s ease-in,
@@ -44,12 +44,72 @@
 .project-item img{
     width: 100%;
     height: auto;
+    max-height: 150px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
 
-/* Container for project info */
+/* Container for project info and disclaimer */
 .project-item .info{
     width: 90%;
     margin: auto;
+}
+
+/* Project disclaimer */
+.project-item .disclaimer{
+    border-radius: 12px;
+    border-left: orange 3px solid;
+    background-color: rgb(251, 239, 216);
+    transition: background-color 0.2s ease-in;
+    padding: 1px 12px 1px 12px;
+    width: 85%;
+    margin: auto;
+}
+
+.project-item .disclaimer.dark{
+    background-color: rgb(62, 18, 0, 0.75);
+}
+
+/* Project buttons container */
+.project-item .buttons-container{
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    gap: 50px;
+}
+
+/* Individual buttons  */
+.project-item .buttons-container a{
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Github button */
+.project-item .buttons-container .github, .project-item .buttons-container .demo{
+    font-weight: bolder;
+    background: none;
+    border: rgb(0, 137, 0) 2px solid;
+    color: rgb(0, 137, 0);
+    transition: 
+        color 0.2s ease-in,
+        background-color 0.2s ease-in;
+}
+.project-item .buttons-container .github:hover{
+    color: white;
+    background-color: rgb(0, 137, 0);
+}
+
+/* Demo button */
+.project-item .buttons-container .demo{
+    border: none;
+    color: white;
+    background: linear-gradient(to right,  #0bd6e1, #6cd76c);
+    box-shadow: 0 0 0 0 rgb(0, 160, 43);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.project-item .buttons-container .demo:hover{
+    box-shadow: 0 0 2.5px 2.5px rgb(0, 160, 43);
+    transform: scale(1.03);
 }
