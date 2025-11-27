@@ -25,14 +25,22 @@
 
 /* Individual projects */
 .project-item{
-    height: 500px;
+    cursor: pointer;
+    height: 520px;
     border: solid black 1px;
     border-radius: 12px;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     background-color: white;
+    will-change: transform;
     transition: 
         color 0.2s ease-in,
-        background-color 0.2s ease-in;
+        box-shadow 0.2s ease-in,
+        background-color 0.2s ease-in,
+        transform 0.2s ease-in;
+}
+.project-item:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 5px 4px rgba(69, 69, 252, 0.3);
 }
 
 /* Individual projects dark styles */
@@ -43,8 +51,7 @@
 /* Project thumbnail */
 .project-item img{
     width: 100%;
-    height: auto;
-    max-height: 150px;
+    height: 150px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
@@ -53,6 +60,11 @@
 .project-item .info{
     width: 90%;
     margin: auto;
+}
+
+/* Project title */
+.project-item .info h3{
+    font-style: italic;
 }
 
 /* Project disclaimer */
@@ -65,7 +77,6 @@
     width: 85%;
     margin: auto;
 }
-
 .project-item .disclaimer.dark{
     background-color: rgb(62, 18, 0, 0.75);
 }
@@ -73,13 +84,16 @@
 /* Project buttons container */
 .project-item .buttons-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 32px;
     gap: 50px;
 }
 
 /* Individual buttons  */
 .project-item .buttons-container a{
+    display: flex;
+    align-items: center;
+    text-align: center;
     padding: 12px;
     border-radius: 8px;
     cursor: pointer;
@@ -112,4 +126,35 @@
 .project-item .buttons-container .demo:hover{
     box-shadow: 0 0 2.5px 2.5px rgb(0, 160, 43);
     transform: scale(1.03);
+}
+
+/* ----- MEDIA QUERIES ----- */
+/* For large tablets/small laptops */
+@media (max-width: 1400px) {
+    .projects { padding: 30px 120px 0 120px; }
+
+    .projects-grid{ grid-template-columns: repeat(2, 1fr);  }
+
+    .project-item { height: 550px; }
+
+    .project-item img { height: auto; }
+}
+
+/* For landscape/small tablets */
+@media (max-width: 900px) {
+    .projects { padding: 30px 20px 0 20px; }
+
+    .projects-grid{
+        grid-template-columns: 1fr;
+        max-width: 90%;
+    }
+
+    .project-item { height: fit-content; }
+}
+
+/* For mobile phones */
+@media (max-width: 500px) {
+    .projects { padding: 30px 20px 0 20px; }
+
+    .projects-grid{ max-width: 100%; }
 }

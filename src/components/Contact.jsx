@@ -1,6 +1,8 @@
 import "../css/Contact.css"
 import { useContext } from "react"
 import { DarkModeContext } from "../contexts/darkModeContext"
+import { contactInfo } from "../data";
+import githubImg from "../assets/images/github.svg"
 
 export default function Contact() {
     // ----- CONTEXTS -----
@@ -18,9 +20,15 @@ export default function Contact() {
 
             {/* Render contact details */}
             <div className="contact-details">
-                <p>Email: <a href="mailto:kieran.a.gough@gmail.com">kieran.a.gough@gmail.com</a></p>
-                <p>Phone (mobile): <span>+61 479 119 194</span></p>
+                <p>Email: <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
+                <p>Phone (mobile): <span>{contactInfo.mobile}</span></p>
             </div>
+
+            {/* Render github button */}
+            <a href={contactInfo.github} target="_blank" rel="noopener noreferrer" className="github">
+                <img src={githubImg}></img>
+                <p>GitHub</p>
+            </a>
         </div>
     )
 }

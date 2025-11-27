@@ -27,6 +27,9 @@ export default function Header() {
         // Main div container for header ui
         <div className={`header ${darkMode ? "dark" : ""}`}>
 
+            {/* Meta element ensures header position = fixed on mobile devices */}
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+
             {/* Iterate through nav array to render all nav options */}
             <div className="nav">
                 {nav.map((n) => {

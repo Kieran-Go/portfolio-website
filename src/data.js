@@ -1,9 +1,12 @@
+// Import project thumbnails
 import kieransSoundsImg from "./assets/images/thumbnails/thumbnail_kierans_sounds.jpg";
 import waldoImg from "./assets/images/thumbnails/thumbnail_waldo.jpg";
 import comingSoonImg from "./assets/images/thumbnails/thumbnail_coming_soon.jpg";
 
+// Disclaimer text
 const disclaimer = "Note: Hosted on Render's free trial. Initial load may take 30-60 seconds as the servers wake up.";
 
+// Project data
 export const projects = [
     {
         title: "Kieran's Sounds",
@@ -12,7 +15,7 @@ export const projects = [
         thumbnail: kieransSoundsImg,
         github: "https://github.com/Kieran-Go/kierans-sounds",
         liveDemo: "https://kierans-sounds.vercel.app/",
-        disclaimer: disclaimer,
+        disclaimer,
     },
     {
         title: "Where's Waldo?",
@@ -21,7 +24,7 @@ export const projects = [
         thumbnail: waldoImg,
         github: "https://github.com/Kieran-Go/wheres-waldo",
         liveDemo: "https://wheres-waldo-swart.vercel.app/",
-        disclaimer: disclaimer,
+        disclaimer,
     },
     {
         title: "More Projects Coming Soon",
@@ -31,6 +34,7 @@ export const projects = [
     },
 ]
 
+// About data
 export const about = {
     description: [
         `Recent IT graduate with a Diploma in Advanced Programming, motivated to apply my skills
@@ -51,10 +55,17 @@ export const about = {
         "Node.js",
         "Express",
         "REST APIs",
-        "PostGreSQL",
+        "PostgreSQL",
         "Git & Github",
         "VS Code",
         "Postman",
         "Responsive Design",
     ],
+}
+
+// Contact data
+export const contactInfo = {
+    email:"kieran.a.gough@gmail.com",
+    mobile: "+61 479 119 194",
+    github: "https://github.com/kieran-go",
 }

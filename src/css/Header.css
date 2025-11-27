@@ -2,8 +2,9 @@
 .header {
   position: fixed; 
   top: 0;
+  left: 0;
+  width: 100vw;
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2.5rem;
@@ -72,4 +73,28 @@
 }
 .header img:hover{
     background-color: rgba(152, 152, 152, 0.5);
+}
+
+/* ----- MEDIA QUERIES ----- */
+/* For mobile phones and small tablets */
+@media (max-width: 500px) {
+  .header { 
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  .header img{
+    position: fixed;
+    top: 0%;
+    width: 30px;
+  }
+}
+
+/* For very small mobile phones */
+@media (max-width: 370px) {
+  .header .nav{
+    gap: 1.5rem;
+  }
+  .header .nav p{
+    font-size: 100%;
+  }
 }

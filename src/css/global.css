@@ -21,10 +21,18 @@ body{
 }
 
 .title-underline {
-    width: 5%;
+    width: 5rem;
     height: 4px;
     background: linear-gradient(to right,  #08949b, #6cd76c);
     margin: auto;
     margin-top: -25px;
     border-radius: 2px;
+}
+
+/* ----- MEDIA QUERIES ----- */
+/* For very small screens: reduce title font-size and underline margin */
+@media (max-width: 460px) {
+    .title { font-size: 2rem; }
+
+    .title-underline { margin-top: -16px; }
 }

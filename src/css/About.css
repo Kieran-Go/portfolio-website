@@ -47,9 +47,12 @@
 
 /* Individual skills */
 .skill{
+    display: flex;
+    align-items: center;
     cursor: pointer;
     border-radius: 12px;
     padding: 15px;
+    height: 30px;
     text-align: left;
     margin-bottom: 0;
     background-color: gray;
@@ -57,4 +60,41 @@
 }
 .skill:hover{
     background-color: rgb(183, 183, 183);
+}
+
+/* ----- MEDIA QUERIES ----- */
+/* For tablet-sized screens */
+@media (max-width: 1200px) {
+    .about { padding: 120px 100px 0 100px; }
+}
+
+/* For smaller tablets */
+@media (max-width: 800px) {
+    .skills-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* For smaller screens */
+@media (max-width: 600px) {
+    .about {
+        padding: 120px 50px 0 50px;
+    }
+    .about .description {
+        font-size: 1rem;
+    }
+    .skills-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 460px) {
+    .about h1 {
+        margin-top: -50px;
+    }
+
+    .about h3{ font-size: 1.5rem;}
+
+    .skill { padding: 5px; font-size: 0.75rem; justify-content: center; }
 }

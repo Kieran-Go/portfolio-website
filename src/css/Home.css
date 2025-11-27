@@ -3,7 +3,7 @@
     text-align: center;
     padding: 150px 0 100px;
     color: black;
-    background-color: rgb(233, 255, 248);
+    background-color: rgb(209, 248, 235);
     transition: 
         color 0.2s ease-in,
         background-color 0.2s ease-in;
@@ -19,6 +19,7 @@
 .home h1{
    font-size: 4rem;
    margin-bottom: 0;
+   margin-right: 50px;
 }
 
 /* Blinking ">" cursor next to the heading */
@@ -53,6 +54,7 @@
 /* Home tagline */
 .home p{
     font-size: 1.5rem;
+    padding: 0 20px 0 20px;
 }
 
 /* Projects button */
@@ -72,4 +74,20 @@
 .home button:hover{
     box-shadow: 0 0 2.5px 2.5px rgb(0, 160, 43);
     transform: scale(1.03);
+}
+
+/* ----- MEDIA QUERIES ----- */
+/* For tablets/landscape */
+@media (max-width: 710px) {
+    .home { padding: 100px 0 50px; }
+    .home h1{ font-size: 3.5rem; }
+    .home .typing{ font-size: 1.75rem; }
+    .home p{ font-size: 1.25rem; }
+}
+
+/* For mobile phones */
+@media (max-width: 490px) {
+    .home h1{ font-size: 2rem; }
+    .home .typing{font-size: 1.25rem; }
+    .home p{ font-size: 1rem; }
 }
