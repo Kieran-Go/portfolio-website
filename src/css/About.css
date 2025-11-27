@@ -1,6 +1,5 @@
 /* Main container for about content */
 .about{
-    /* box-shadow: var(--shadow-top); */
     transition: 
         color var(--transition-medium),
         background-color var(--transition-medium);
@@ -24,6 +23,7 @@
 
 /* Skills heading */
 .about h3{
+    font-family: "Saria";
     font-size: 2rem;
     text-align: center;
     margin-bottom: 0;

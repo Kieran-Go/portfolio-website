@@ -15,6 +15,7 @@
 
 /* Home heading */
 .home h1{
+   font-family: "Saria";
    font-size: 4rem;
    margin-bottom: 0;
    margin-right: 50px;
@@ -38,6 +39,7 @@
 
 /* Home typing sub-heading */
 .home .typing{
+    font-family: "Saria";
     color: var(--clr-accent-cyan);
     font-size: 2rem;
 }
