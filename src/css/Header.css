@@ -1,5 +1,12 @@
 /* Main header content container */
 .header {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  box-shadow: var(--shadow-bottom);
+  transition: 
+    color var(--transition-medium),
+    background-color var(--transition-medium);
+
   position: fixed; 
   top: 0;
   left: 0;
@@ -10,18 +17,12 @@
   padding: 1rem 2.5rem;
   z-index: 1000;
   box-sizing: border-box;
-  color: black;
-  background-color: white;
-  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.25);
-  transition: 
-    color 0.2s ease-in,
-    background-color 0.2s ease-in;
 }
 
 /* Dark mode styles for header container */
 .header.dark {
-    color: white;
-    background-color: #0f172a;
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-text-dark);
 }
 
 /* Nav links container */
@@ -32,28 +33,28 @@
 
 /* Individual nav links */
 .header .nav p {
+  transition: var(--transition-fast);
   position: relative;
   display: inline-block;
   margin: 0;
   font-weight: bold;
   font-size: large;
   cursor: pointer;
-  transition: color 0.2s ease-in;
 }
 .header .nav p:hover {
-  color: #17b417;
+  color: var(--clr-accent-green);
 }
 
 /* ::after pseudo-element for underline effect */
 .header .nav p::after {
+  background: var(--grad-green-cyan);
+  transition: width var(--transition-slow);
   content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
   height: 3px;
   width: 0%; 
-  background: linear-gradient(to right, #10b910, #00ffff);
-  transition: width 0.3s ease-in-out;
   border-radius: 2px;
 }
 
@@ -64,12 +65,12 @@
 
 /* Dark mode toggle image */
 .header img {
+  transition: background-color var(--transition-fast);
   cursor: pointer;
   user-select: none;
   width: 40px;
   padding: 0.3rem;
   border-radius: 100%;
-  transition: background-color 0.3s ease-in;
 }
 .header img:hover{
     background-color: rgba(152, 152, 152, 0.5);
@@ -91,10 +92,6 @@
 
 /* For very small mobile phones */
 @media (max-width: 370px) {
-  .header .nav{
-    gap: 1.5rem;
-  }
-  .header .nav p{
-    font-size: 100%;
-  }
+  .header .nav{ gap: 1.5rem; }
+  .header .nav p{ font-size: 100%; }
 }

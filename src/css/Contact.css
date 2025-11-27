@@ -1,17 +1,16 @@
 /* Main container for Contact content */
 .contact{
+    transition: 
+        color var(--transition-medium),
+        background-color var(--transition-medium);
     text-align: center;
     margin: auto;
     padding: 30px 250px 100px 250px;
-    transition: 
-        color 0.2s ease-in,
-        background-color 0.2s ease-in;
 }
 
 /* Dark mode styles for Contact container */
 .contact.dark {
-    color: white;
-    background-color: #0f172a;
+    background-color: var(--clr-bg-darker);
 }
 
 /* Short paragraph */
@@ -32,19 +31,18 @@
     font-weight: bold;
 }
 .contact-details p span, .contact-details p a{
-    color: rgb(17, 171, 17);
+    color: var(--clr-accent-green);
 }
 .contact-details p a:hover{
-    color: rgb(16, 218, 16);
+    color: var(--clr-accent-green-light);
 }
 
 /* Github button */
 .contact .github {
-    position: relative;
-    overflow: hidden;
-    color: white;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
+    transition: transform var(--transition-fast);
     background: rgb(46, 48, 75);
+    color: white;
     padding: 0 30px;
     display: flex;
     gap: 10px;
@@ -53,27 +51,10 @@
     margin: auto;
     width: fit-content;
     margin-top: 25px;
-    transition: transform 0.2s ease;
 }
-
-/* For gradiant background fade-in effect */
-.contact .github::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right,  #0bd6e1, #6cd76c);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    z-index: 0;
-    border-radius: 12px;
-}
-.contact .github:hover::before {
-    opacity: 1;
-}
-
-/* Show children above button container */
-.contact .github > * {
-    z-index: 1;
+.contact .github:hover{
+    background: var(--grad-green-cyan);
+    transform: scale(1.02);
 }
 
 /* Github button image */

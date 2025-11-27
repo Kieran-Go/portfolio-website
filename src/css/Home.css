@@ -1,18 +1,16 @@
 /* Main container for Home content */
 .home{
+    transition: background-color var(--transition-medium);
+    background-color: rgb(194, 242, 228);
     text-align: center;
     padding: 150px 0 100px;
-    color: black;
-    background-color: rgb(209, 248, 235);
-    transition: 
-        color 0.2s ease-in,
-        background-color 0.2s ease-in;
+    border-radius: 10% 10% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: var(--shadow-bottom);
 }
 
 /* Dark theme styles */
 .home.dark{
-    color: white;
-    background-color: rgb(4, 5, 24);
+    background-color: var(--clr-bg-darkest);
 }
 
 /* Home heading */
@@ -24,8 +22,8 @@
 
 /* Blinking ">" cursor next to the heading */
 .home h1::before {
+    color: var(--clr-accent-cyan);
     content: ">";
-    color: rgb(0, 176, 176);
     display: inline-block;
     margin-right: 20px;
     animation: blink 1.5s step-start infinite;
@@ -40,14 +38,14 @@
 
 /* Home typing sub-heading */
 .home .typing{
+    color: var(--clr-accent-cyan);
     font-size: 2rem;
-    color: rgb(0, 176, 176);
 }
 /* Typing "cursor" effect */
 .typing::after {
+    color: var(--clr-accent-cyan);
     content: "|";
     margin-left: 5px;
-    color: rgb(0, 176, 176);
     animation: blink 1s step-start infinite;
 }
 
@@ -55,25 +53,26 @@
 .home p{
     font-size: 1.5rem;
     padding: 0 20px 0 20px;
+    font-style: italic;
 }
 
 /* Projects button */
 .home button{
+    background: var(--grad-green-cyan);
+    transition: transform var(--transition-fast);
+    border-radius: var(--radius-xl);
     cursor: pointer;
     color: white;
     font-weight: bolder;
-    background: linear-gradient(to right,  #0bd6e1, #6cd76c);
-    border-radius: 24px;
     border: none;
     padding: 20px;
     margin-top: 20px;
     will-change: transform;
-    box-shadow: 0 0 0 0 rgb(0, 160, 43);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    box-shadow: var(--shadow-item);
 }
 .home button:hover{
-    box-shadow: 0 0 2.5px 2.5px rgb(0, 160, 43);
-    transform: scale(1.03);
+    background: var(--grad-green-cyan-light);
+    transform: scale(1.02);
 }
 
 /* ----- MEDIA QUERIES ----- */

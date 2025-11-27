@@ -1,6 +1,19 @@
-body{
+@import url('./vars.css');
+
+/* Container for entire page's content */
+.content{
+    color: var(--clr-text);
+    background-color: var(--clr-bg);
+    transition: 
+        color var(--transition-medium),
+        background-color var(--transition-medium);
     font-family: sans-serif; /* Replace with a more suitable font later */
-    background-color: #f8fafc;
+}
+
+/* Dark mode content vars */
+.content.dark{
+    color: var(--clr-text-dark);
+    background-color: var(--clr-bg-darker);
 }
 
 /* ----- TITLE STYLES ----- */
@@ -11,28 +24,27 @@ body{
 }
 
 .title::before{
+    color: var(--clr-accent-green);
     content: "< ";
-    color: rgb(17, 171, 17);
 }
 
 .title::after{
+    color: var(--clr-accent-cyan);
     content: " />";
-    color: rgb(18, 176, 176);
 }
 
 .title-underline {
+    background: var(--grad-green-cyan);
     width: 5rem;
     height: 4px;
-    background: linear-gradient(to right,  #08949b, #6cd76c);
     margin: auto;
     margin-top: -25px;
     border-radius: 2px;
 }
 
 /* ----- MEDIA QUERIES ----- */
-/* For very small screens: reduce title font-size and underline margin */
+/* For mobile phones */
 @media (max-width: 460px) {
     .title { font-size: 2rem; }
-
     .title-underline { margin-top: -16px; }
 }
