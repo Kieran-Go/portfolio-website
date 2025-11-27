@@ -1,6 +1,6 @@
 // Import project thumbnails
-import kieransSoundsImg from "./assets/images/thumbnails/thumbnail_kierans_sounds.jpg";
-import waldoImg from "./assets/images/thumbnails/thumbnail_waldo.jpg";
+import kieransSoundsImg from "./assets/images/thumbnails/thumbnail_kierans_sounds.JPG";
+import waldoImg from "./assets/images/thumbnails/thumbnail_waldo.JPG";
 import comingSoonImg from "./assets/images/thumbnails/thumbnail_coming_soon.jpg";
 
 // Disclaimer text
